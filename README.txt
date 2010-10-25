@@ -11,7 +11,7 @@ Plone 3 compatibility
 ---------------------
 
 This packages requires plone.app.imaging which requires two pins in buildout
-when using Plone 3, which there are:
+when using Plone 3, which there are::
 
-Products.Archetypes = 1.5.16
-plone.scale = 1.2
+    Products.Archetypes = 1.5.16
+    plone.scale = 1.2

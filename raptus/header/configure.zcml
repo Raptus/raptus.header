@@ -16,7 +16,7 @@
       name="default"
       title="raptus.header"
       directory="profiles/default"
-      description="contain header images"
+      description="Provides a new folderish content type which may contain multiple images which are then displayed by the provided viewlet."
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
   
