@@ -36,28 +36,35 @@ class HeaderViewlet(ViewletBase):
                 break
             else:
                 parent = aq_parent(parent)
-        if not len(brain): return
+        if not len(brain):
+            return
         
         """take the first header-element
         """
         header = brain[0]
         images = catalog(object_provides=IATImage.__identifier__,
                             path={'query': header.getPath(),'depth': 1})
+
         if not len(images):
             return
-        
-        self.hasImage = True
+
         image = choice(images)
         obj = image.getObject()
         scales = component.getMultiAdapter((obj, obj.REQUEST), name='images')
         scale = scales.scale('image',
                              width=(props.getProperty('header_width', 1000000)),
                              height=(props.getProperty('header_height', 1000000)))
+        if scale is None:
+            return
+
         self.image = scale.tag()
         self.description = image['Description']
         self.title = image['Title']
         """ if article core exist, so this will load the manage box
         """
+
+        self.hasImage = True
+
         try:
             from raptus.article.core import interfaces
             manageable = interfaces.IManageable(self.context)
