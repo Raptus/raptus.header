@@ -1,6 +1,14 @@
 Changelog
 =========
 
+2.0b6 (2011-03-08)
+------------------
+
+* Be more defensive about the existence of raptus.article.core (an AttributeError was raised
+  if the package was available but not installed)
+* CSS Bugfixes for the information box
+* Adjusted thumbing (a value of 0 in the properties now means no thumbing)
+
 2.0b5 (2011-03-08)
 ------------------
 

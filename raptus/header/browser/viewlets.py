@@ -112,9 +112,11 @@ class HeaderViewlet(ViewletBase):
         image = choice(images)
         obj = image.getObject()
         scales = component.getMultiAdapter((obj, obj.REQUEST), name='images')
+        w = self.props.getProperty('header_width', 0)
+        h = self.props.getProperty('header_height', 0)
         scale = scales.scale('image',
-                             width=(self.props.getProperty('header_width', 1000000)),
-                             height=(self.props.getProperty('header_height', 1000000)))
+                             width=(w and w or 1000000),
+                             height=(h and h or 1000000))
         if scale is None:
             return
 
@@ -131,6 +133,8 @@ class HeaderViewlet(ViewletBase):
 
         try:
             from raptus.article.core import interfaces
+            if not hasattr(self.context, 'raptus_article_macros'):
+                return
             manageable = interfaces.IManageable(self.context)
             self.manage = manageable.getList([image]).pop()
         except ImportError:

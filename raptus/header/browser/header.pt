@@ -14,7 +14,7 @@
     <tal:image condition="view/hasImage">
       <tal:block tal:condition="view/manage"
                  tal:define="item view/manage">
-        <metal:manage use-macro="context/raptus_article_macros/macros/manage" />
+        <metal:manage use-macro="context/raptus_article_macros/macros/manage|nothing" />
       </tal:block>
       <img tal:replace="structure view/image" />
       <p tal:condition="view/description"
