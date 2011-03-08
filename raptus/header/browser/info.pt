@@ -14,10 +14,14 @@
     </dt>
     <dd>
       <tal:msg tal:condition="nocall:view/disabled">
-        <span i18n:translate="" tal:omit-tag="">
-          There is a header available which was disabled from <a i18n:name="parent"
-                                                                 tal:attributes="href view/disabled/absolute_url"
-                                                                 tal:content="view/disabled/Title">Title</a> downwards.
+        <span i18n:translate="" tal:omit-tag="" tal:condition="python:not view.disabled == context">
+          An inherited header is available which is not displayed because of the inherited settings from
+          <a i18n:name="parent"
+             tal:attributes="href view/disabled/absolute_url"
+             tal:content="view/disabled/Title">Title</a>.
+        </span>
+        <span i18n:translate="" tal:omit-tag="" tal:condition="python:view.disabled == context">
+          An inherited header is available which is currently not displayed.
         </span>
         <br />
       </tal:msg>
@@ -28,13 +32,13 @@
              tal:condition="view/enable"
              tal:attributes="href string:?enable_header=1"
              i18n:translate="">
-            Enable the header from this folder downwards
+            Display the header here and on subordinated levels
           </a>
           <a href=""
              tal:condition="view/disable"
              tal:attributes="href string:?disable_header=1"
              i18n:translate="">
-            Disable the header from this folder downwards
+            Hide the header here and on subordinated levels
           </a>
         </tal:first>
         or
@@ -43,7 +47,7 @@
            tal:attributes="href string:?inherit_header=1"
            i18n:name="last"
            i18n:translate="">
-          let the parent folders decide whether the header should be displayed or not.
+          inherit the settings from superordinated levels
         </a>
       </tal:cond>
       <tal:single tal:condition="not: view/inherit">
@@ -51,21 +55,23 @@
            tal:condition="view/enable"
            tal:attributes="href string:?enable_header=1"
            i18n:translate="">
-          Enable the header from this folder downwards
+          Display the header here and on subordinated levels
         </a>
         <a href=""
            tal:condition="view/disable"
            tal:attributes="href string:?disable_header=1"
            i18n:translate="">
-          Disable the header from this folder downwards
+          Hide the header here and on subordinated levels
         </a>
       </tal:single>
-      <br />
-      <a href=""
-         tal:attributes="href header/getURL"
-         i18n:translate="">
-        Click here to edit the images shown in this header
-      </a>
+      <tal:edit condition="python:not view.disabled">
+        <br />
+        <a href=""
+           tal:attributes="href header/getURL"
+           i18n:translate="">
+          Edit the images shown in this header
+        </a>
+      </tal:edit>
     </dd>
   </dl>
 </html>

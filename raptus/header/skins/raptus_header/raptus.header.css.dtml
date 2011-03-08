@@ -23,14 +23,18 @@
   margin:0;
 }
 
+.header-info dd {
+  overflow:hidden;
+}
+
 .portal-content-header-withimage .header-info {
   width:auto;
   position:absolute;
   top:0;
-  opacity:0.4;
-  -moz-opacity:0.4;
-  -webkit-opacity:0.4;
-  -o-opacity:0.4;
+  opacity:0.6;
+  -moz-opacity:0.6;
+  -webkit-opacity:0.6;
+  -o-opacity:0.6;
 }
 
 .portal-content-header-withimage > .header-info dt {

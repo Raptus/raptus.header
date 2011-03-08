@@ -1,6 +1,11 @@
 Changelog
 =========
 
+2.0b5 (2011-03-08)
+------------------
+
+* Improved wording of the disable/enable feature
+
 2.0b4 (2011-03-07)
 ------------------
 

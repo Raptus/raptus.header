@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2011-03-07 14:36+0000\n"
+"POT-Creation-Date: 2011-03-08 09:20+0000\n"
 "PO-Revision-Date: 2010-04-14 16:08+0200\n"
 "Last-Translator: Samuel Riolo <>\n"
 "Language-Team: English\n"
@@ -19,23 +19,30 @@ msgstr ""
 "Domain: raptus.header\n"
 
 #. Default: "${first} or ${last}"
-#: browser/info.pt:41
+#: browser/info.pt:45
 msgid "${first} or ${last}"
 msgstr ""
 
-#. Default: "Click here to edit the images shown in this header"
-#: browser/info.pt:64
-msgid "Click here to edit the images shown in this header"
+#. Default: "An inherited header is available which is currently not displayed."
+#: browser/info.pt:23
+msgid "An inherited header is available which is currently not displayed."
 msgstr ""
 
-#. Default: "Disable the header from this folder downwards"
-#: browser/info.pt:33
-msgid "Disable the header from this folder downwards"
+#. Default: "An inherited header is available which is not displayed because of the inherited settings from ${parent}."
+#: browser/info.pt:19
+msgid ""
+"An inherited header is available which is not displayed because of the "
+"inherited settings from ${parent}."
 msgstr ""
 
-#. Default: "Enable the header from this folder downwards"
-#: browser/info.pt:27
-msgid "Enable the header from this folder downwards"
+#. Default: "Display the header here and on subordinated levels"
+#: browser/info.pt:31
+msgid "Display the header here and on subordinated levels"
+msgstr ""
+
+#. Default: "Edit the images shown in this header"
+#: browser/info.pt:69
+msgid "Edit the images shown in this header"
 msgstr ""
 
 #. Default: "Header"
@@ -43,10 +50,9 @@ msgstr ""
 msgid "Header"
 msgstr "Headers"
 
-#. Default: "There is a header available which was disabled from ${parent} downwards."
-#: browser/info.pt:18
-msgid ""
-"There is a header available which was disabled from ${parent} downwards."
+#. Default: "Hide the header here and on subordinated levels"
+#: browser/info.pt:37
+msgid "Hide the header here and on subordinated levels"
 msgstr ""
 
 #. Default: "This header will display all contained images on the top of your site"
@@ -54,8 +60,7 @@ msgstr ""
 msgid "This header will display all contained images on the top of your site"
 msgstr "This header will display all contained images on the top of your site"
 
-#. Default: "let the parent folders decide whether the header should be displayed or not."
-#: browser/info.pt:41
-msgid ""
-"let the parent folders decide whether the header should be displayed or not."
+#. Default: "inherit the settings from superordinated levels"
+#: browser/info.pt:45
+msgid "inherit the settings from superordinated levels"
 msgstr ""
