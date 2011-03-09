@@ -59,7 +59,7 @@ class HeaderViewlet(ViewletBase):
 
     def info(self):
         header = self.header()
-        if not header or self.context.isTemporary() or not self.mship.checkPermission(permissions.ModifyPortalContent, self.context):
+        if not header or (hasattr(self.context, 'isTemporary') and self.context.isTemporary()) or not self.mship.checkPermission(permissions.ModifyPortalContent, self.context):
             return
         annotations = IAnnotations(self.context)
         self.enable = False

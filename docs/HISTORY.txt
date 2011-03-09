@@ -1,6 +1,12 @@
 Changelog
 =========
 
+2.0b7 (2011-03-10)
+------------------
+
+* fix isTemporary attribute on non-archetype object
+
+
 2.0b6 (2011-03-08)
 ------------------
 
