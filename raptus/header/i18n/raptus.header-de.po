@@ -17,6 +17,8 @@ msgstr ""
 "Language-Name: German\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: raptus.header\n"
+"X-Is-Fallback-For: de-at de-li de-lu de-ch de-de\n"
+
 
 #. Default: "${first} or ${last}"
 #: browser/info.pt:45
