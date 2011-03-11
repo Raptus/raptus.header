@@ -21,12 +21,12 @@ msgstr ""
 #. Default: "${first} or ${last}"
 #: browser/info.pt:45
 msgid "${first} or ${last}"
-msgstr ""
+msgstr "${first} ou ${last}"
 
 #. Default: "An inherited header is available which is currently not displayed."
 #: browser/info.pt:23
 msgid "An inherited header is available which is currently not displayed."
-msgstr ""
+msgstr "Une en-tête héritée est disponible, mais elle n'est pas affichée actuellement. "
 
 #. Default: "An inherited header is available which is not displayed because of the inherited settings from ${parent}."
 #: browser/info.pt:19
@@ -34,33 +34,35 @@ msgid ""
 "An inherited header is available which is not displayed because of the "
 "inherited settings from ${parent}."
 msgstr ""
+"Une en-tête héritée est disponible, mais sont affichage est bloqué "
+"par une configuration héritée depuis ${parent}. "
 
 #. Default: "Display the header here and on subordinated levels"
 #: browser/info.pt:31
 msgid "Display the header here and on subordinated levels"
-msgstr ""
+msgstr "Afficher l'en-tête ici et dans les niveaux inférieurs"
 
 #. Default: "Edit the images shown in this header"
 #: browser/info.pt:69
 msgid "Edit the images shown in this header"
-msgstr ""
+msgstr "Editer les images de l'en-tête affichée ici"
 
 #. Default: "Header"
 #: profiles/default/types/Header.xml
 msgid "Header"
-msgstr ""
+msgstr "Images de l'en-tête"
 
 #. Default: "Hide the header here and on subordinated levels"
 #: browser/info.pt:37
 msgid "Hide the header here and on subordinated levels"
-msgstr ""
+msgstr "Bloquer l'en-tête ici et dans les niveaux inférieurs"
 
 #. Default: "This header will display all contained images on the top of your site"
 #: profiles/default/types/Header.xml
 msgid "This header will display all contained images on the top of your site"
-msgstr ""
+msgstr "Cette en-tête afficher les images contenues en haut de la page"
 
 #. Default: "inherit the settings from superordinated levels"
 #: browser/info.pt:45
 msgid "inherit the settings from superordinated levels"
-msgstr ""
+msgstr "Hériter les configurations depuis le niveau supérieur"

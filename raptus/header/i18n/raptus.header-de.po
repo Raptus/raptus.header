@@ -26,8 +26,7 @@ msgstr "${first} oder ${last}"
 #. Default: "An inherited header is available which is currently not displayed."
 #: browser/info.pt:23
 msgid "An inherited header is available which is currently not displayed."
-msgstr ""
-"Ein vererbter Header ist verfügbar, wird aber momentan nicht angezeigt. "
+msgstr "Ein vererbter Header ist verfügbar, wird aber momentan nicht angezeigt. "
 
 #. Default: "An inherited header is available which is not displayed because of the inherited settings from ${parent}."
 #: browser/info.pt:19
@@ -61,8 +60,7 @@ msgstr "Header hier und in untergeordneten Ebenen ausblenden"
 #. Default: "This header will display all contained images on the top of your site"
 #: profiles/default/types/Header.xml
 msgid "This header will display all contained images on the top of your site"
-msgstr ""
-"Dieser Titel-Inhaltstyp zeigt alle beinhalteten Bilder oberhalb der Seite"
+msgstr "Dieser Header zeigt alle beinhalteten Bilder oberhalb der Seite"
 
 #. Default: "inherit the settings from superordinated levels"
 #: browser/info.pt:45

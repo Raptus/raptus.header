@@ -5,6 +5,7 @@ Changelog
 ------------------
 
 * fix isTemporary attribute on non-archetype object
+* add french translation
 
 
 2.0b6 (2011-03-08)
