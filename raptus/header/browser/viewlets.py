@@ -61,7 +61,9 @@ class HeaderViewlet(ViewletBase):
         header = self.header()
         if not header or (hasattr(self.context, 'isTemporary') and self.context.isTemporary()) or not self.mship.checkPermission(permissions.ModifyPortalContent, self.context):
             return
-        annotations = IAnnotations(self.context)
+        annotations = component.queryAdapter(self.context,interface=IAnnotations)
+        if annotations is None:
+            return
         self.enable = False
         self.disable = False
         self.inherit = annotations.has_key(ANNOTATIONS_KEY_DISABLED) or annotations.has_key(ANNOTATIONS_KEY_ENABLED)
