@@ -6,7 +6,7 @@
       lang="en"
       tal:omit-tag=""
       tal:define="header view/header">
-  <dl class="portalMessage info header-info"
+  <dl class="portalMessage header-info"
       i18n:domain="raptus.header">
     <dt i18n:domain="plone"
         i18n:translate="">

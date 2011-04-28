@@ -1,6 +1,11 @@
 Changelog
 =========
 
+2.0b9 (2011-04-28)
+------------------
+
+* Removed info class from header info portalMessage to not have it displayed in ajax popup forms
+
 2.0b8 (2011-03-16)
 ------------------
 
