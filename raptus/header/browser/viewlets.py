@@ -57,6 +57,7 @@ class HeaderViewlet(ViewletBase):
                 if annotations.has_key(ANNOTATIONS_KEY_ENABLED):
                     del annotations[ANNOTATIONS_KEY_ENABLED]
 
+    @memoize
     def info(self):
         header = self.header()
         if not header or (hasattr(self.context, 'isTemporary') and self.context.isTemporary()) or not self.mship.checkPermission(permissions.ModifyPortalContent, self.context):

@@ -2,7 +2,7 @@
 import os
 from setuptools import setup, find_packages
 
-version = '2.0b9'
+version = '2.0b10'
 
 tests_require=['zope.testing']
 
