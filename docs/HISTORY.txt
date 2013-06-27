@@ -1,6 +1,12 @@
 Changelog
 =========
 
+2.0b11 (unreleased)
+-------------------
+
+* Added new configuration option (responsive) which makes it possible to have the header span a dynamic width
+  and height
+
 2.0b10 (2011-09-15)
 -------------------
 

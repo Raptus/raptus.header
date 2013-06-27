@@ -5,4 +5,9 @@
    <element value="Header"/>
   </property>
  </object>
+ <object name="site_properties" meta_type="Plone Property Sheet">
+  <property name="backgroundsize_selectors" type="lines" purge="False">
+   <element value=".portal-content-header-responsive"/>
+  </property>
+ </object>
 </object>

@@ -2,7 +2,7 @@
 import os
 from setuptools import setup, find_packages
 
-version = '2.0b10'
+version = '2.0b11.dev0'
 
 tests_require=['zope.testing']
 
@@ -28,6 +28,7 @@ setup(name='raptus.header',
       zip_safe=False,
       install_requires=['setuptools',
                         'plone.app.imaging',
+                        'raptus.backgroundsize',
                         # -*- Extra requirements: -*-
                         ],
       tests_require=tests_require,

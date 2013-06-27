@@ -1,5 +1,6 @@
 /* <dtml-with base_properties> (do not remove this :) */
 /* <dtml-call "REQUEST.set('width', portal_properties.site_properties.header_width)"> (not this either :) */
+/* <dtml-call "REQUEST.set('height', portal_properties.site_properties.header_height)"> (not this either :) */
 
 .portal-content-header {
   position:relative;
@@ -9,14 +10,26 @@
   </dtml-if>
 }
 
-.portal-content-header {
-  text-align:center;
+.portal-content-header .wrapped {
+  margin:0 auto;
+  max-width:<dtml-var portalMaxWidth missing="1280px">;
+  position:relative;
+  height:100%;
 }
 
-.portal-content-header p {
+.portal-content-header .content {
   position:absolute;
-  left:0;
-  bottom:0;
+  right:<dtml-var portalHorizontalPadding missing="40px">;
+  bottom:1em;
+  width:30%;
+  padding:0.5em 1em;
+  background-color:#333;
+  color:#fff;
+}
+
+.portal-content-header .content h2 {
+  margin:0.25em 0;
+  color:#fff;
 }
 
 .header-info {
@@ -26,6 +39,14 @@
 
 .header-info dd {
   overflow:hidden;
+}
+
+.portal-content-header-responsive {
+  height:&dtml-height;px;
+  background-color:transparent;
+  background-repeat:no-repeat;
+  background-position:center center;
+  background-size:cover;
 }
 
 .portal-content-header-withimage .header-info {
@@ -39,11 +60,11 @@
   -o-opacity:0.6;
 }
 
-.portal-content-header-withimage > .header-info dt {
+.portal-content-header-withimage .header-info dt {
   cursor:pointer;
 }
 
-.portal-content-header-withimage > .header-info dd {
+.portal-content-header-withimage .header-info dd {
   display:none;
 }
 

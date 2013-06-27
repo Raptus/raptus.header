@@ -7,7 +7,8 @@ from Products.CMFCore.utils import getToolByName
 
 _PROPERTIES = [ dict(name='header_allow_inheritance', type_='boolean', value=True),
                 dict(name='header_width', type_='int', value=0),
-                dict(name='header_height', type_='int', value=0)]
+                dict(name='header_height', type_='int', value=0),
+                dict(name='header_responsive', type_='boolean', value=False)]
 
 def setupProperties(context):
     if not context.readDataFile('raptus.header_setupProperties.txt'):

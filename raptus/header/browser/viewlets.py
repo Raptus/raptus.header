@@ -103,6 +103,7 @@ class HeaderViewlet(ViewletBase):
     
     def update(self):
         self.hasImage = False
+        self.responsive = self.props.getProperty('header_responsive', False)
         header = self.header()
         if not header:
             return
@@ -113,28 +114,32 @@ class HeaderViewlet(ViewletBase):
             return
 
         image = choice(images)
-        obj = image.getObject()
-        scales = component.getMultiAdapter((obj, obj.REQUEST), name='images')
-        w = self.props.getProperty('header_width', 0)
-        h = self.props.getProperty('header_height', 0)
-        scale = scales.scale('image',
-                             width=(w and w or 1000000),
-                             height=(h and h or 1000000))
-        if scale is None:
-            return
 
-        self.image = scale.tag()
-        self.description = image['Description']
-        self.title = image['Title']
-        """ if article core exist, so this will load the manage box
-        """
-        
+        if self.responsive:
+            self.image = image.getURL() + '/image'
+            self.thumb = image.getURL() + '/image_thumb'
+        else:
+            obj = image.getObject()
+            scales = component.getMultiAdapter((obj, obj.REQUEST), name='images')
+            w = self.props.getProperty('header_width', 0)
+            h = self.props.getProperty('header_height', 0)
+            scale = scales.scale('image',
+                                 width=(w and w or 1000000),
+                                 height=(h and h or 1000000))
+            if scale is None:
+                return
+
+            self.image = scale.tag()
+
+        self.description = image.Description
+        self.title = image.Title
+
         if self.disabled:
             return
-        
+
         self.hasImage = True
 
-        try:
+        try: # if article core exist, so this will load the manage box
             from raptus.article.core import interfaces
             if not hasattr(self.context, 'raptus_article_macros'):
                 return
