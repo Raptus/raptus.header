@@ -1,7 +1,7 @@
 Changelog
 =========
 
-2.0b12 (unreleased)
+2.0b12 (2013-09-25)
 -------------------
 
 * Removed unused imports in interfaces.py gaining plone 4.3 compatibility
