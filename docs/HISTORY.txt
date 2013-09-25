@@ -4,8 +4,7 @@ Changelog
 2.0b12 (unreleased)
 -------------------
 
-- Nothing changed yet.
-
+* Removed unused imports in interfaces.py gaining plone 4.3 compatibility
 
 2.0b11 (2013-07-01)
 -------------------
@@ -33,7 +32,6 @@ Changelog
 
 * fixed isTemporary attribute on non-archetype object
 * add french translation
-
 
 2.0b6 (2011-03-08)
 ------------------
